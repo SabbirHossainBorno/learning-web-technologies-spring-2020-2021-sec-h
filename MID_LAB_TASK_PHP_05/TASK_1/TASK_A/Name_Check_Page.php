@@ -1,3 +1,3 @@
 <?php
-    print_r($_GET)['myname'];
+    print_r($_GET)['Name'];
 ?>
