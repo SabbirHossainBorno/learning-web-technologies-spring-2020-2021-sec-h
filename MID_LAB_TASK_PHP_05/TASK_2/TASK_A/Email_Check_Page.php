@@ -1,3 +1,3 @@
 <?php
-    print_r($_GET)['email'];
+    echo $_POST['email']
 ?>

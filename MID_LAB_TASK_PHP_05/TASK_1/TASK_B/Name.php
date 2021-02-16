@@ -1,8 +1,10 @@
 <?php
 
-if(isset($_REQUEST['submit'])){
+if(isset($_REQUEST['submit']))
+{
     
-    if($_POST['Name']==""){
+    if($_POST['Name']=="")
+    {
         
         echo "Please Insert A Name";       
     }    
@@ -15,7 +17,7 @@ if(isset($_REQUEST['submit'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Name Page</title>
+    <title>Name</title>
 </head>
 <body>
     

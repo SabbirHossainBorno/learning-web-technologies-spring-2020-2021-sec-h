@@ -23,7 +23,7 @@
 </head>
 <body>
     
-    <form method="post">
+    <form method="post" action="Name.php">
         
         <fieldset>
             
