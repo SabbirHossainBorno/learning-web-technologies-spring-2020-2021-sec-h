@@ -1,7 +1,17 @@
 <?php
 
-$arr = array("A" =>20,"B" =>20,"C" =>30,"D" =>40);
+$arr =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+$element = 5;
+$check = false;
+foreach ($arr as $value) 
+{
+    if($value === $element)
+    {
+        echo "Element Found. <br> Element Was: $value";
+        $check = true;
+        break;
+    }
+}
 
-echo array_search(30,$arr);
-
+if($check==false) echo "<br> Element not found.";
 ?>
