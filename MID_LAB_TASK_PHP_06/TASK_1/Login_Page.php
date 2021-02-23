@@ -43,12 +43,12 @@ else{
 <html lang="en">
 
 <head>
-    <title>Name</title>
+    <title>Login</title>
 </head>
 
 <body>
 
-    <form method="post" action="Name_Check_Page.php">
+    <form method="post" action="Login_Page.php">
 
         <fieldset style="width: 300px;">
 
