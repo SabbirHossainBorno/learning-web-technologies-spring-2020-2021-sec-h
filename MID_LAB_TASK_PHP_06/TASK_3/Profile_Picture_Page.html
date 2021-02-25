@@ -1,3 +1,19 @@
+<?php
+	
+if(isset($_POST['Submit']))
+{
+    $supported_image = array('jpg','jpeg','png');
+    $ext = strtolower(pathinfo($_POST['Profile_Picture_Page'], PATHINFO_EXTENSION));
+    if (in_array($ext, $supported_image) === false)
+    {
+        echo "Please check the requirement size";
+    }
+    elseif(getimagesize($_POST['ProfilePicture']) > 4)
+    {
+        echo "Please check the requirement size";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
