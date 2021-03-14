@@ -16,7 +16,7 @@
         }else{
 
             if($password == $cpassword ){
-                if (file_exists('../model/user.json'))
+                if (file_exists('userValidationInfo.json'))
                 {
                     $myfile= file_get_contents('userValidationInfo.json');
                     $current_data = json_decode($myfile,true);
@@ -29,11 +29,11 @@
                                 ];
                                 $current_data[]=$user;
                                 $writedata=json_encode($current_data);
-                                file_put_contents('../model/user.json',$writedata);
+                                file_put_contents('userValidationInfo.json',$writedata);
 
-                                if (file_put_contents('../model/user.json',$writedata))
+                                if (file_put_contents('userValidationInfo.json',$writedata))
                                 {
-                                    header('location:../view/login.html');
+                                    header('login.html');
                                     
                                 }
                                 else{

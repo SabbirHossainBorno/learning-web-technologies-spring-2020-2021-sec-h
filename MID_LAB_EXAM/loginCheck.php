@@ -6,22 +6,22 @@
     if(isset($_POST['submit'])){
         
 
-        $username =$_POST['username'];
+        $user_id =$_POST['userid'];
         $password = $_POST['password'];
 
-         if($username == "" || $password == ""){
+         if($user_id == "" || $password == ""){
             echo "Please enter username and password";
             
         }else{
             //$user = $_SESSION['c_user'];
-            $myfile= file_get_contents('../model/user.json');
+            $myfile= file_get_contents('userValidationInfo.json');
             $current_data = json_decode($myfile,true);
             foreach ($current_data as $search)
             {
                 
 
 
-                if($search['username'] == $username && $search['password'] == $password){
+                if($search['userid'] == $user_id && $search['password'] == $password){
                 setcookie('flag', true, time()+3600, '/');
 
 
@@ -37,8 +37,6 @@
                 $_SESSION['password']=$user_password;
                 $_SESSION['id']=$user_id;
                 $_SESSION['type']=$user_type;
-               
-                header('location: ../view/dashboard.php');
                 }else{
                     echo "Username or password is invalid";
                 } 
@@ -49,6 +47,6 @@
     }
     else if(isset($_POST['signup']))
         {
-            header('location:../view/registration.html');
+            header('registration.html');
         }
 ?>
