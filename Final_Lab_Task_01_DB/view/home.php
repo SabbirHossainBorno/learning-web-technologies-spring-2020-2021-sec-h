@@ -4,7 +4,7 @@
 ?>
 
 	<div id="page_title">
-		<h1>Welcome Home, <?php echo $_SESSION['abc']['username']?></h1>		
+		<h1>Welcome Home, <?php echo $_SESSION['username']?></h1>		
 	</div>
 
 	<div id="nav_bar">

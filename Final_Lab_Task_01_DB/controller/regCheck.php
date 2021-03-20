@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	require_once('../model/userModel.php');
 
 	if(isset($_POST['submit'])){
 
@@ -13,25 +14,29 @@
 			echo "invalid information...please try again!";
 		}else{
 
-			if($password == $repass){
+			if($password == $repass)
+			{
+				$user = 
+				[
+					'username' => $username,
+					'name' => $name,
+					'email' => $email,
+					'password' => $password,
+					'repass' => $repass,
+					'type' => 'user',
+				];
+				$status = insertUser();
 
-				//echo "registration success...";
-				//echo "<a href='login.html'>SignIn </a>";
+			if($status)
+				{
+					header('location: ../view/login.html');
+				}
+				else
+					{
+						echo "error";
+					}
 
-				//store user information
-				$user = [
-							'id'		=>1, 
-							'name'		=>$name, 
-							'username'	=>$username, 
-							'email'		=>$email, 
-							'password'	=>$password
-						];
-
-				$_SESSION['abc'] = $user;
-				//$_SESSION['username'] = $username;
-				//$_SESSION['password'] = $password;
-
-				header('location: ../view/login.html');
+				
 			}else{
 				echo "password & re-type password mismatch...";
 			}
