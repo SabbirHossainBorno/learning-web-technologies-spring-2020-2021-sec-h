@@ -22,7 +22,7 @@
 		
 		<tr>
 			<td colspan="3" align="right">
-				<a href="home.html">Go Home</a>
+				<a href="home.php">Go Home</a>
 			</td>
 		</tr>
 	</table>			
