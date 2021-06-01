@@ -41,6 +41,16 @@ function countWords(str) {
 		dob.focus();
 		return false;
   		}
+    if (mobileNumber == "") {
+		alert("Mobile Number Can't Be Empty");
+		dob.focus();
+		return false;
+  		}
+    if (nidNumber == "") {
+		alert("NID Number Can't Be Empty");
+		dob.focus();
+		return false;
+  		}
 	
 }
 </script>
